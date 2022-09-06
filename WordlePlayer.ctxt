@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=WordlePlayer
+comment0.text=\n\ Allows\ the\ user\ to\ play\ Wordle\ with\ graphics.\n\ Assumes\ WordleDictionary\ and\ WordleGame\ are\ implemented\ correctly.\n\ \n\ YOU\ DO\ NOT\ NEED\ TO\ MODIFY\ THIS\ CLASS\!\n\n\ @author\ Max\ Ward\n
+comment1.params=
+comment1.target=WordlePlayer()
+comment2.params=wordToGuess
+comment2.target=void\ playTurn(java.lang.String)
+comment2.text=\n\ Plays\ a\ turn\ of\ Wordle.\n
+numComments=3

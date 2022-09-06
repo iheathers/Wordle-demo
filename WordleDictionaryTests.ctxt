@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=WordleDictionaryTests
+comment0.text=\n\ Tests\ for\ WordleDictionary.\n\ For\ use\ with\ the\ CITS1001\ 2022\ Semester\ 2\ project.\n\ If\ you\ pass\ all\ tests,\ you\ are\ (almost\ certainly)\ going\ to\ get\ full\ marks\ for\ correctness\ (but\ maybe\ not\ everything\ else).\n\ \n\ YOU\ DO\ NOT\ NEED\ TO\ MODIFY\ THESE\ TESTS\!\n\n\ @author\ \ Max\ Ward\n
+comment1.params=
+comment1.target=void\ testGetWordsWithLength()
+comment2.params=
+comment2.target=void\ testGetRandomWord()
+numComments=3

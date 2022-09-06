@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=WordleDictionary
+comment0.text=\n\ Manages\ a\ dictionary\ of\ words\ for\ use\ in\ Wordle.\n\n\ @author\ (Pritam\ Suwal\ Shrestha\ AND\ 23771397)\n
+comment1.params=wordsFilePath
+comment1.target=WordleDictionary(java.lang.String)
+comment1.text=\n\ Constructs\ a\ WordleDictionary\ from\ a\ single\ parameter\ which\ gives\ a\ String\n\ containing\ the\ path\ to\ the\ file\ of\ words\ to\ use.\n\ \n\ YOU\ DO\ NOT\ NEED\ TO\ MODIFY\ THIS\ METHOD'S\ CODE\!\n
+comment2.params=
+comment2.target=WordleDictionary()
+comment2.text=\n\ Default\ constructor\ for\ use\ in\ BlueJ\ that\ uses\ the\ default\ path\ to\ "words.txt".\n\ \n\ YOU\ DO\ NOT\ NEED\ TO\ MODIFY\ THIS\ METHOD'S\ CODE\!\n\ DO\ NOT\ MODIFY\ words.txt\!\n
+comment3.params=length
+comment3.target=java.util.ArrayList\ getWordsWithLength(int)
+comment3.text=\n\ Returns\ an\ ArrayList\ containg\ all\ the\ words\ in\ the\ dictionary\ with\ a\ specified\ length\ (in\ number\ of\ letters).\n\ For\ example,\ if\ we\ called\ getWordsWithLength(3)\ it\ might\ return\ an\ ArrayList\ containing\ the\ word\ "cat"\ (along\ with\ all\ other\ 3\ letter\ words)\n\ because\ "cat"\ has\ 3\ letters,\ but\ the\ array\ list\ will\ not\ contain\ "test"\ because\ "test"\ has\ 4\ letters.\n\ \n\ Hint\ 1\:\ You\ will\ need\ to\ create\ a\ new\ ArrayList<String>,\ put\ the\ words\ in\ it,\ and\ return\ it.\n\ Hint\ 2\:\ See\ above\ that\ this\ class\ has\ a\ field\ "words"\ containing\ all\ the\ words.\ You\ will\ need\ to\ use\ this\ field.\n
+comment4.params=length
+comment4.target=java.lang.String\ getRandomWord(int)
+comment4.text=\n\ Returns\ a\ randomly\ selected\ word\ from\ the\ dictionary\ with\ a\ specified\ length.\n\ \n\ Hint\ 1\:\ Use\ getWordsWithLength\n\ Hint\ 2\:\ Recall\ java.util.Random\ from\ the\ lectures\n
+numComments=5
