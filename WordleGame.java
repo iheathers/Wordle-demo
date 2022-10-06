@@ -19,8 +19,6 @@ public class WordleGame {
      */
     public WordleGame(String secretWord)
     {
-        // ADDED "this.secretWord" so that that instance variable is not shadowed - Variable Shadowing
-                
         this.secretWord = secretWord;
     }
     
@@ -45,14 +43,12 @@ public class WordleGame {
      */
     public boolean isInSecretWord(char letter)
     {
-        // This could have been implemented by using for loop and charAt method as well. But, indexOf method seems more straightforward  
-        
-        // indexOf() method returns the "position" of the first occurrence of specified character(s) in a string or "-1" if it never occurs
-        // Hence, if result of the method call is -1, it indicates that the character does not exist in the string.
-        
-        if (secretWord.indexOf(letter) != -1){
-            return true;
+        for (int index = 0; index < secretWord.length(); index++){
+            if (secretWord.charAt(index) == letter){
+                return true;
+            }
         }
+        
         return false;
     }
     
@@ -92,28 +88,33 @@ public class WordleGame {
      */
     public String guessWord(String wordToGuess)
     {
-        char[] characterArray = new char[wordToGuess.length()]; // This creates an array of characters of length that string wordToGuess has.
+        // Step 1: Create an array of characters of required length
+        // Step 2: Check if the length of guessed word and secret word are same
+        // Step 3: Add corresponding characters based on the occurence of the letters and their position
+        // Step 4: Create a string from the characters array after all the comparisons are done and return it
         
-        // Checks the equality of length of string "secretWord" and "guessed word" and return empty string "" if they are different
+        char[] resultCharacters = new char[wordToGuess.length()];
+        
         if (this.secretWord.length() != wordToGuess.length()){
             return "";
         }
         
-        for (int i = 0; i < wordToGuess.length(); i++){
-            if (!isInSecretWord(wordToGuess.charAt(i))){
-                characterArray[i] = '_';
+        for (int index = 0; index < wordToGuess.length(); index++){            
+            char guessedWordCharacterAtIndex = wordToGuess.charAt(index);
+            char secretWordCharacterAtIndex = secretWord.charAt(index);
+            
+            if (!isInSecretWord(guessedWordCharacterAtIndex)){
+                resultCharacters[index] = '_';
             } else {
-                if (wordToGuess.charAt(i) == secretWord.charAt(i)){
-                    characterArray[i] = '*';
+                if (guessedWordCharacterAtIndex == secretWordCharacterAtIndex){
+                    resultCharacters[index] = '*';
                 } else {
-                    characterArray[i] = '.';
+                    resultCharacters[index] = '.';
                 }  
             }
         }
         
-        // characterArray is an array and not a string. Since, we need to return String in this method, 
-        // this converts characterArray to a single string
-        String result = new String(characterArray);
-        return result;
+        String resultString = new String(resultCharacters);
+        return resultString;
     }
 }

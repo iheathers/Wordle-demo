@@ -63,8 +63,6 @@ public class WordleDictionary
         ArrayList<String> filteredWords = new ArrayList<>();
         
         for (String word: words){
-            
-            // ADD THE WORDS TO filterWords ARRAYLIST if the length is equal to specified value
             if (word.length() == length){
                 filteredWords.add(word);
             }
@@ -83,8 +81,9 @@ public class WordleDictionary
     {
         ArrayList<String> filteredWords = getWordsWithLength(length);
         
-        Random r = new Random();        
-        int randomIndex = r.nextInt(filteredWords.size());
+        // The nextInt() is used to get the random integer value between 0 (inclusive) and length of the filteredWords arraylist (exclusive)
+        Random randomObj = new Random();        
+        int randomIndex = randomObj.nextInt(filteredWords.size());
         
         String randomWord = filteredWords.get(randomIndex); 
         return randomWord; 
